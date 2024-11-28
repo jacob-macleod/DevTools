@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Dashboard</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="loader">
+        <h1>Dev<span class="accent">Tools</span></h1>
+    </div>      
+  <div class="dashboard">
+    <header>
+      <h1>DevTools</h1>
+    </header>
+    <main>
+      <div class="app-grid">
+        <a href="apps/cyberpunk_timer.html" class="app-card">
+          <i class="fa-solid fa-stopwatch"></i>
+          <h2>Cyberpunk Timer</h2>
+        </a>
+        <a href="apps/default_timer.html" class="app-card">
+          <i class="fa-regular fa-clock"></i>
+          <h2>Default Timer</h2>
+        </a>
+        <a href="apps/typing_test.html" class="app-card">
+          <i class="fa-solid fa-keyboard"></i>
+          <h2>Typing Test</h2>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <p>See the source code at <a href="https://github.com/jacob-macleod/DevTools">GitHub</a></p>
+    </footer>
+  </div>
+</body>
+<script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+</script>  
+</html>
