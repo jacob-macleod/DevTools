@@ -1,0 +1,7 @@
+# Ignore Terraform state and temporary files
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Ignore service account keys
+*.json
