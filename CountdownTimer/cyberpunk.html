@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown to 13:40 PM</title>
+<style>
+    body {
+        background-color: black;
+        color: #0ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #countdown {
+        font-size: 10vw;
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #f0f, 0 0 30px #f0f;
+    }
+</style>
+</head>
+<body>
+
+<div id="countdown">Loading...</div>
+
+<script>
+    function updateCountdown() {
+        const now = new Date();
+        const target = new Date();
+        target.setHours(13, 40, 0, 0);
+        
+        // If current time is past 13:40, target tomorrow
+        if (now > target) {
+            target.setDate(now.getDate() + 1);
+        }
+
+        const secondsRemaining = Math.floor((target - now) / 1000);
+
+        const countdownElement = document.getElementById('countdown');
+
+        if (secondsRemaining > 0) {
+            countdownElement.innerText = secondsRemaining;
+        } else {
+            countdownElement.innerText = "00:00:00";
+            document.body.style.backgroundColor = 'red';
+            countdownElement.style.color = '#fff';
+            countdownElement.style.textShadow = "0 0 10px #fff, 0 0 20px #ff0, 0 0 30px #ff0";
+        }
+    }
+
+    setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
